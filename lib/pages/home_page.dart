@@ -95,21 +95,24 @@ class _HomePageState extends State<HomePage> {
                         width: 30,
                       ),
                       Row(
-                        children: List.generate(usersList.length, (index) {
-                          return Padding(
-                            padding: const EdgeInsets.only(right: 30),
-                            child: Container(
-                              width: 58,
-                              height: 58,
-                              decoration: BoxDecoration(
-                                  shape: BoxShape.circle,
-                                  image: DecorationImage(
-                                      image:
-                                          NetworkImage(usersList[index]['img']),
-                                      fit: BoxFit.cover)),
-                            ),
-                          );
-                        }),
+                        children: List.generate(
+                          usersList.length,
+                          (index) {
+                            return Padding(
+                              padding: const EdgeInsets.only(right: 30),
+                              child: Container(
+                                width: 58,
+                                height: 58,
+                                decoration: BoxDecoration(
+                                    shape: BoxShape.circle,
+                                    image: DecorationImage(
+                                        image: NetworkImage(
+                                            usersList[index]['img']),
+                                        fit: BoxFit.cover)),
+                              ),
+                            );
+                          },
+                        ),
                       )
                     ],
                   ),
